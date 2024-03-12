@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+*{
+    list-style: none;
+    scroll-behavior: smooth;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;;
+    min-height: 100vh;
+    max-width: 100%;
+    color: black;
+    background-color: rgb(237, 241, 245);
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .logo img{
+    height: 100px;
+    width: auto;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    height:65px;
+  }
+  
+  .header .navigation ul li {
+    float: left;
+    position: relative;
+  }
+  
+  .header .navigation ul li a {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+  }
+  
+  .header .navigation ul li a:hover {
+    background-color: rgb(26, 134, 62);
+  }
+  
+  .header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+    display: none;
+  }
+  
+  
+  .header .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  
+  .header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+  }
+  
+  .header .navigation ul li ul li {
+    width: 100%;
+
+  }
+  
+  .header .navigation ul li:hover > ul {
+    display: initial;
+  }
+  
+  .header .navigation ul li ul li span {
+    float: right;
+    color: white;
+    background-color: rgb(28, 155, 70);
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  #toggle ,
+  .header label {
+    display: none;
+    cursor: pointer;
+  }
+  
+  img {
+    width: 45px;
+    height: 35px;
+  }
+
+  #Inicio{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+  #Inicio img{
+    width: 500px;
+    height: 500px;
+  }
+  /*--SECCIONES--*/
+  #Ciudadano-sec{
+    padding-top: 110px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #ffffff;
+    padding: 1.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input{
+    height: 20px;
+  }
+
+  button {
+    padding: 0.5em;
+    background-color: rgb(28, 155, 70);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 500px;
+    margin-left: 3.7%;
+    margin-top: 1em;
+  }
+
+  button:hover{
+    transform: scale(1.05);
+    transition: ease 200ms;
+  }
+
+  section{
+    padding-top: 110px;
+    width: 100vw;
+    height: 70vh;
+
+  }
+  #ADN-sec{
+    background-color: #ffffff;
+    height: fit-content;
+    padding-top: 50px;
+  }
+
+  #ADNf{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 241, 245);
+    margin-bottom: 5em;
+  }
+
+  .search-container-ADN{
+    display: flex;
+
+  }
+  #boton-buscar{
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 155, 70);
+    text-decoration: none;
+    color: white;
+    height: 25px;
+    width: 60px;
+  }
+
+  #boton-buscar:hover{
+    transform: scale(1.1);
+    transition: ease 200ms;
+  }
+  
+  .sec-title{
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .main-content{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  #ciudadanos-form{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #InfoCiudadano li{
+    width: 280px;
+    border: 1px solid rgba(151, 150, 150, 0.829);
+    margin-bottom: 5px;
+    padding-top: 1px;
+    padding-left: 5px;
+    font-size: 18px;
+  }
+
+
+/*--FOOTER--*/
+  footer{
+    font-size: 15px;
+    height: 80px;
+    text-align: center;
+    background-color: #f1eded;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 0.5em;
+  }
