@@ -17,11 +17,11 @@ function encontrarCoincidencias() {
     const secuenciaIngresada = document.getElementById("secuenciaIngresada").value;
     const resultadosDiv = document.getElementById("ResultadosDiv");
 
-    let ciudadanos = listaCiudadanos; // Asumo que listaCiudadanos es una variable global
+    let ciudadanos = listaCiudadanos;
 
     const ciudadanosOrdenados = ciudadanos.slice().sort((a, b) => {
-        let similitudA = 0; // Cambiado a let
-        let similitudB = 0; // Cambiado a let
+        let similitudA = 0; 
+        let similitudB = 0; 
 
         for (let j = 0; j < secuenciaIngresada.length; j++) {
             if (secuenciaIngresada[j] === a.codigo_adn[j]) {
@@ -31,18 +31,23 @@ function encontrarCoincidencias() {
                 similitudB++;
             }
         }
+        a["similitud"] = similitudA
+        b["similitud"] = similitudB
+
 
         return similitudB - similitudA; // Orden descendente de similitud
     });
 
     resultadosDiv.innerHTML = "<h1>Resultados Obtenidos</h1>";
-    for (let i = 0; i < 5 && i < ciudadanosOrdenados.length; i++) { // Añadida condición para asegurarse de que no se exceda el tamaño del array
+    for (let i = 0; i < 5 && i < ciudadanosOrdenados.length; i++) { 
         const ciudadano = ciudadanosOrdenados[i];
+
 
         resultadosDiv.innerHTML += `
             <div>
                 <p>Nombre: ${ciudadano.nombre_completo}</p>
                 <p>Código ADN: ${ciudadano.codigo_adn}</p>
+                <p>Similitud : ${(ciudadano.similitud)*5}%</p>
             </div>
         `;
     }

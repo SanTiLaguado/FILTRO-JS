@@ -232,6 +232,8 @@ body {
 /*--FOOTER--*/
   footer{
     font-size: 15px;
+    line-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
     height: 80px;
     text-align: center;
     background-color: #f1eded;
